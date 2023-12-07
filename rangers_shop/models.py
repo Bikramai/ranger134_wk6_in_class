@@ -56,7 +56,7 @@ class User(db.Model, UserMixin):
     def set_password(self, password):
         return generate_password_hash(password) #hashes the password so it is secure (aka no one can see it)
 
-    def __repr__(sefl):
+    def __repr__(self):
         return f"<User: {self.username}>"
 
 
@@ -144,7 +144,7 @@ class ProdOrder(db.Model):
         self.cust_id = cust_id 
 
     def set_id(self):
-        return str(uuid.uuid4)
+        return str(uuid.uuid4())
     
 
     def set_price(self, quantity, price):

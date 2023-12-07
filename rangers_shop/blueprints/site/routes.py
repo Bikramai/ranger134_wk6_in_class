@@ -30,7 +30,7 @@ def shop():
     our_class = "Rangers are the best "
 
                                     #whats on left side is html, right side is whats in our route
-    return render_template('shop.html', shop=allprods, coolmessage = our_class, stats=shop_stats )#looking inside our template_folder (site_templates)
+    return render_template('shop.html', shop=allprods, coolmessage = our_class )#looking inside our template_folder (site_templates)
 
 @site.route('/shop/create', methods= ['GET', 'POST'])
 def create():
